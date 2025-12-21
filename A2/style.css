@@ -76,6 +76,7 @@ p{
     background-color: rgb(45, 45, 45);
     padding: 15px 30px;
     border-radius: 15px;
+    cursor: pointer;
 }
 
 .box{
