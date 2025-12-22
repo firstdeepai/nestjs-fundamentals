@@ -1,0 +1,58 @@
+header{
+    background-color: lightblue;
+    justify-items: center;
+    align-content: center;
+}
+
+header > p{
+    margin:18px;
+    font-size: 25px;
+    font-weight: 800;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 0px 50px;
+    justify-self: center;
+    width: 400px;
+}
+
+#errors{
+    border: 1px solid red;
+    color: red;
+    padding: 8px;
+    margin-bottom: 0px;
+    border-radius: 6px;
+    font-size: 18px;
+    display: none;
+}
+
+label{
+    font-size: 20px;
+    font-family: sans-serif;
+    margin: 15px 0px 0px 5px;
+    font-weight: bold;
+    color: rgb(30, 30, 30);
+}
+
+input{
+    padding: 8px 10px;
+    font-size: 18px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.view{
+    position: relative;
+}
+
+.eye{
+    position: absolute;
+    top: 0px;
+    right: -15px;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
