@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 4</title>
+    <script src="https://firstdeepai.github.io/nestjs-fundamentals/jquery.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Rubik+Gemstones&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <h2>Register account</h2>
+        <div class="form">
+            <p class="error"></p>
+            <label for="email">Email address</label>
+            <input type="text" id="email" name="email">
+            <label for="number">Phone number</label>
+            <input type="text" id="number" name="number">
+            <label for="password">Create password</label>
+            <div class="view">
+                <input type="text" id="password" name="password">
+                <div class="eye">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0"/>
+                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8m8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7"/>
+                    </svg>
+                </div>
+            </div>
+            <label for="cpassword">Confirm password</label>
+            <input type="text" id="cpassword" name="cpassword">
+            <input type="submit" id="submit">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
