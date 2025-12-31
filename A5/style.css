@@ -1,0 +1,599 @@
+body, html {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header > nav {
+    position: relative; 
+}
+
+header .frow {
+    height: 55px;
+    background-image: linear-gradient(to left, purple, rgb(201, 0, 201));
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 0 10px;
+}
+
+.frow > img {
+    height: 30px;
+    margin-left: 10px;
+    width: auto;
+}
+
+.desktop-nav {
+    margin: 0;
+    padding: 0 15px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.menu {
+    height: 35px;
+    width: 35px;
+    border-radius: 6px;
+    border: 2px solid whitesmoke;
+    display: none; 
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#menu-icon {
+    height: 20px;
+    width: 20px;
+}
+
+#headlist {
+    display: none;
+    background-image: linear-gradient(to left, purple, rgb(201, 0, 201));
+    width: 100%;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#headlist ul {
+    margin: 0;
+    padding: 20px 0;
+    list-style: none;
+    text-align: center;
+}
+
+#headlist ul li {
+    margin: 15px 0;
+}
+
+#home {
+    position: relative;
+    background-image: linear-gradient(to left, purple, rgb(201, 0, 201));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 60px;
+    padding-bottom: 80px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.heroContent {
+    width: 45%;
+    color: white;
+    padding: 20px;
+    z-index: 2;
+}
+
+.jumbotron h1 {
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.jumbotron .lead {
+    font-size: 14px;
+}
+
+.watch {
+    margin-top: 24px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    height: 35px;
+    cursor: pointer;
+}
+
+.watch img {
+    height: 100%;
+    width: auto;
+}
+
+.watch p {
+    font-weight: 500;
+    margin: 0px 10px;
+}
+
+.heroImage {
+    width: 45%;
+    text-align: center;
+    z-index: 2;
+}
+
+.heroImage img {
+    max-height: 400px;
+}
+
+#wave1 {
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+    height: auto;
+    width: 100%;
+    z-index: 1;
+}
+
+#services {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.heading h2, .heading h3 {
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.heading .line1 {
+    background-color: purple;
+    height: 2px;
+    width: 100px;
+}
+
+.heading .line2 {
+    margin-top: -4px;
+    background-color: purple;
+    height: 6px;
+    width: 40px;
+}
+
+#services .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#services .col-md {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#services img {
+    height: 70px;
+    margin-bottom: 15px;
+}
+
+#services h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+#services .lead {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.5;
+}
+
+.btn {
+    margin-top: 40px;
+    border-radius: 50px;
+    color: white;
+    font-size: 16px;
+    padding: 10px 25px;
+    background-image: linear-gradient(to left, purple, rgb(201, 0, 201));
+    cursor: pointer;
+    border: none;
+}
+
+#about {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+#about .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#about .col-md {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+#about .text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+#about .img-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about h3 {
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#about ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.8;
+}
+
+#about li {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#testimonials {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 0;
+}
+
+#testimonials .row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 90%;
+    max-width: 1000px;
+}
+
+#testimonials .col-md {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    border: 5px solid transparent;
+    border-left: 5px solid purple;
+    padding: 10px 20px;
+}
+
+#testimonials .lead {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+#testimonials .user {
+    display: flex;
+    align-items: center;
+}
+
+#testimonials .user p {
+    font-size: 12px;
+    padding: 0px;
+    padding-left: 12px;
+    margin: 0px;
+}
+
+#testimonials .username {
+    font-weight: 900;
+    color: black;
+}
+
+#testimonials img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#contact {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+    background-color: rgb(248, 249, 250);
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#contact .socialLinks {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contact a img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+#contact a img:hover {
+    transform: translateY(-10px);
+}
+
+footer {
+    background-image: linear-gradient(to left, purple, rgb(201, 0, 201));
+    color: white;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+#wave2 {
+    position: relative;
+    top: -1px; 
+    left: 0;
+    width: 100%;
+    line-height: 0;
+    padding-bottom: 40px;
+}
+
+footer .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+footer .col-md {
+    flex: 1;
+    padding: 20px;
+    min-width: 150px;
+    max-width: 380px;
+}
+
+footer .footer-logo {
+    height: 40px;
+    margin-bottom: 20px;
+    filter: brightness(0) invert(1);
+}
+
+footer .lead{
+    font-size: 14px;
+}
+
+footer h3 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+footer ul {
+    list-style: square;
+    text-align: left;
+    padding-left: 20px;
+}
+
+footer li {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+footer input {
+    width: 100%;
+    padding: 6px 8px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.footer-btn {
+    padding: 6px 15px;
+    background-color: white;
+    color: purple;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .desktop-nav {
+        display: none; 
+    }
+    
+    .menu {
+        display: flex; 
+    }
+
+    #home {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+        justify-content: flex-start;
+        min-height: auto;
+    }
+
+    .heroContent {
+        width: 100%;
+        padding: 0 20px;
+        margin-bottom: 30px;
+    }
+
+    .heroImage {
+        width: 100%;
+        margin-bottom: 60px;
+    }
+
+    .heroImage img {
+        max-height: 300px;
+        width: 80%;
+    }
+
+    .watch {
+        justify-content: center;
+    }
+
+    #services {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    #services .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services .col-md {
+        max-width: 90%;
+        margin-bottom: 40px;
+    }
+
+    #about {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    #about .row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #about .col-md {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    #about .text-col {
+        align-items: center;
+        order: 2;
+    }
+
+    #about ul {
+        text-align: left;
+        padding-left: 20px;
+        display: inline-block;
+    }
+
+    #testimonials {
+        min-height: auto;
+        padding: 40px 15px;
+    }
+
+    #testimonials .row {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    #testimonials .col-md {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 30px;
+        border-left: 3px solid purple;
+    }
+
+    #contact {
+        padding: 40px 15px;
+    }
+
+    #contact h2 {
+        font-size: 24px;
+    }
+
+    #contact .socialLinks {
+        gap: 15px;
+    }
+
+    #contact img {
+        height: 40px;
+    }
+
+    footer {
+        text-align: center;
+    }
+    
+    footer .row {
+        flex-direction: column;
+    }
+    
+    footer .col-md {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    footer .footer-logo {
+        margin: 0 auto 20px auto;
+    }
+}
