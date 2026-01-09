@@ -150,7 +150,7 @@ include 'includes/header.php';
 </div>
 
 <div class="container py-5">
-    <div class="row g-5 mb-5">
+    <div class="row mb-5">
         <div class="col-lg-6">
             <div class="card border-0 shadow-sm rounded-4 overflow-hidden mb-3">
                 <div class="position-relative bg-white p-4 text-center" style="min-height: 500px; display:flex; align-items:center; justify-content:center;">

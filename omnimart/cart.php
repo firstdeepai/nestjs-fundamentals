@@ -141,7 +141,7 @@ $final_total = max(0, $subtotal - $discount);
     <h2 class="fw-bold mb-4 display-6">Shopping Bag</h2>
     <?php if($msg): ?><div class="alert alert-info"><?php echo $msg; ?></div><?php endif; ?>
 
-    <div class="row g-5">
+    <div class="row">
         <div class="col-lg-8">
             <?php if (count($_SESSION['cart']) > 0): ?>
                 <?php foreach ($_SESSION['cart'] as $id => $item): 
