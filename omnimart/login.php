@@ -19,25 +19,48 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $user = $stmt->fetch();
 
     if ($user && password_verify($password, $user['password'])) {
-        $_SESSION['user_id'] = $user['id'];
-        $_SESSION['user_name'] = $user['name'];
-        $_SESSION['user_role'] = $user['role'];
-
+        
         if ($user['role'] == 'vendor') {
-            $check = $conn->prepare("SELECT id FROM vendors WHERE user_id = ?");
-            $check->execute([$user['id']]);
-            if ($check->rowCount() == 0) {
-                $conn->prepare("INSERT INTO vendors (user_id, name) VALUES (?, ?)")->execute([$user['id'], $user['name']]);
+            $v_stmt = $conn->prepare("SELECT id, status FROM vendors WHERE user_id = ?");
+            $v_stmt->execute([$user['id']]);
+            $vendor_data = $v_stmt->fetch();
+
+            if ($vendor_data) {
+                if ($vendor_data['status'] == 'Suspended') {
+                    $error = "Your vendor account is suspended. Please contact Admin.";
+                } else {
+                    $_SESSION['user_id'] = $user['id'];
+                    $_SESSION['user_name'] = $user['name'];
+                    $_SESSION['user_role'] = $user['role'];
+                    header("Location: vendor/dashboard.php");
+                    exit;
+                }
+            } else {
+                $conn->prepare("INSERT INTO vendors (user_id, name, status) VALUES (?, ?, 'Active')")->execute([$user['id'], $user['name']]);
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['user_name'] = $user['name'];
+                $_SESSION['user_role'] = $user['role'];
+                header("Location: vendor/dashboard.php");
+                exit;
             }
-            header("Location: vendor/dashboard.php");
         } 
+        
         elseif ($user['role'] == 'admin') {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_name'] = $user['name'];
+            $_SESSION['user_role'] = $user['role'];
             header("Location: admin/dashboard.php");
+            exit;
         } 
+        
         else {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['user_name'] = $user['name'];
+            $_SESSION['user_role'] = $user['role'];
             header("Location: index.php");
+            exit;
         }
-        exit;
+
     } else {
         $error = "Invalid email or password.";
     }
